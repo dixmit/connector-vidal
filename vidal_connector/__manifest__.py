@@ -15,5 +15,5 @@
     ],
     "demo": [],
     "installable": True,
-    "license": "AGPL-3",
+    "license": "LGPL-3",
 }
