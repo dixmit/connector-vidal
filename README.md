@@ -7,7 +7,7 @@
 
 <!-- /!\ do not modify above this line -->
 
-# This Repo host the base connector for Odoo to query Vidal API
+# Odoo Connector for Vidal
 
 This Repo hosts the base Odoo connector to Vidal API
 

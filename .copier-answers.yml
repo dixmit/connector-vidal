@@ -18,7 +18,7 @@ org_name: INVITU
 org_slug: invitu
 rebel_module_groups: []
 repo_description: This Repo hosts the base Odoo connector to Vidal API
-repo_name: This Repo host the base connector for Odoo to query Vidal API
+repo_name: Odoo Connector for Vidal
 repo_slug: connector-vidal
 repo_website: https://github.com/invitu/connector-vidal
 use_pyproject_toml: true
