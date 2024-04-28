@@ -1,5 +1,6 @@
 import logging
 
+import feedparser
 import requests
 
 from odoo import _, models
@@ -104,4 +105,4 @@ class VidalApi(models.Model):
                 )
                 % (url_request)
             )
-        return r
+        return feedparser.parse(r)

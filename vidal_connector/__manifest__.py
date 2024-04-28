@@ -10,6 +10,9 @@
     "depends": [
         "base",
     ],
+    "external_dependencies": {
+        "python": ["feedparser"],
+    },
     "data": [
         "views/res_company_views.xml",
     ],
