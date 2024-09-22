@@ -27,7 +27,7 @@ class VidalApi(models.Model):
         return authentication
 
     def api_post(self, url, data, full=False):
-        headers = "Content-Type: text/xml"
+        headers = {"Content-Type": "text/xml"}
         authentication = self.get_authentication()
         url_request = (
             VIDAL_BASE_URL + ("/rest/api/" if not full else "") + url + authentication
@@ -42,7 +42,7 @@ class VidalApi(models.Model):
                     )
                     % (url_request)
                 )
-            elif r.status_code != 201:
+            elif r.status_code not in [200, 201]:
                 raise UserError(
                     _(
                         "Message vidal %(message)s - Detail %(detail)s - \
@@ -67,7 +67,7 @@ class VidalApi(models.Model):
                 )
                 % (url_request)
             ) from e
-        return r
+        return feedparser.parse(r.content)
 
     def api_get(self, url, full=False, **kwargs):
         authentication = self.get_authentication()
